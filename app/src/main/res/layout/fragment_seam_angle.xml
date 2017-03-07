@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B4ACAB"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yellow_border"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="Select Angle of Swing :"
+                    android:textColor="@color/yellow"
+                    android:textSize="15dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yellow_border"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/swing_arrays"
+                    android:paddingLeft="20dp"
+                    android:prompt="@string/swing_prompt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yellow_border"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="Select Speed of Swing : "
+                    android:textColor="@color/yellow"
+                    android:textSize="15dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerspeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yellow_border"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/speed_arrays"
+                    android:paddingLeft="20dp"
+                    android:prompt="@string/speed_prompt" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/startanimation"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linear"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/yellow"
+                android:fontFamily="sans-serif"
+                android:text="Start"
+                android:textSize="15dp" />
+
+            <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Swing Animation Demo"-->
+                <!--android:textColor="@color/yellow"-->
+                <!--android:textSize="25dp"-->
+                <!--android:textStyle="bold" />-->
+
+            <ImageView
+                android:id="@+id/animationView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_cricket" />
+
+            <TextView
+                android:id="@+id/in"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/yellow"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
